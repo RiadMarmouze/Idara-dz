@@ -1,0 +1,23 @@
+.navbar {
+    @apply w-full lg:w-fit lg:text-xl;
+}
+
+.activeLink {
+    @apply text-primary-100;
+    /* Tailwind utility for active state */
+}
+
+/* If you want to add specific styles for hover or focus, you can do that as well */
+.link {
+    @apply  text-dark-text-primary transition-colors duration-500;
+}
+
+.link:hover {
+    @apply text-dark-text-secondary;
+    /* Hover state */
+}
+
+.link:focus {
+    @apply ring-1 ring-primary-50;
+    /* Focus state */
+}

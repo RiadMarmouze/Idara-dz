@@ -1,0 +1,41 @@
+.button {
+    @apply bg-blue-500 text-white px-4 py-2 rounded focus:outline-none;
+}
+
+.button:hover {
+    @apply bg-blue-600;
+}
+
+.button:focus {
+    @apply ring ring-blue-300;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+    .button {
+        @apply bg-blue-500 text-white;
+    }
+
+    .button:hover {
+        @apply bg-blue-600;
+    }
+
+    .button:focus {
+        @apply ring-blue-300;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .button {
+        @apply bg-gray-800 text-white;
+    }
+
+    .button:hover {
+        @apply bg-gray-700;
+    }
+
+    .button:focus {
+        @apply ring-gray-500;
+    }
+}

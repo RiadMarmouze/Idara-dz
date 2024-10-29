@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* globals.css */
+
+/* Regular weights */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    /* Thin */
+    src: url('/assets/Fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    /* ExtraLight */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    /* Light */
+    src: url('/assets/Fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    /* Regular */
+    src: url('/assets/Fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    /* Medium */
+    src: url('/assets/Fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    /* SemiBold */
+    src: url('/assets/Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    src: url('/assets/Fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    /* ExtraBold */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    /* Black */
+    src: url('/assets/Fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+/* Italic weights */
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 100;
+    /* Thin Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 200;
+    /* ExtraLight Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 300;
+    /* Light Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    /* Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    /* Medium Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    /* SemiBold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    /* Bold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    /* ExtraBold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 900;
+    /* Black Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+}
+
+/* Set the global font family */
+html {
+    font-family: "Cairo","Tajawal","Scheherazade New", sans-serif;
+    font-optical-sizing: auto;
+    /* font-family: 'inherit', 'Poppins', sans-serif; */
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    @apply bg-primary-500/0;
+    /* Tailwind classes for background and shadow */
+}
+
+.footer {
+    @apply bg-primary-500 text-primary-50;
+    /* Tailwind utilities for background and shadow */
+}
+
+.hero-bg {
+    @apply bg-transparent;
+    /* Tailwind utilities for background and shadow */
+}
+
+.body-responsive-container {
+    @apply px-5 w-screen lg:w-[70vw] lg:px-0;
+}
+
+
+/* Custom Global Classes */
+.text-error {
+    @apply font-bold text-primary-500;
+}
+
+.text-info {
+    @apply text-primary-500;
+}
+
+.text-section-title {
+    @apply text-3xl font-semibold leading-none lg:text-[64px] lg:leading-[70px];
+}
+
+.text-section-subtitle {
+    @apply text-[20px] font-semibold leading-none lg:text-[58px] lg:leading-[88px];
+}
+
+.text-description {
+    @apply text-xs font-light leading-tight lg:text-[26px] lg:leading-[30px];
+}
+
+.text-title {
+    @apply text-[20px] font-semibold leading-none lg:text-[43px] lg:leading-[41px];
+}
+
+.text-paragraph {
+    @apply text-xs lg:text-xl;
+}
+
+.card-shadow-drop-down-effect {
+    @apply border border-gray-100 shadow-lg hover:border-gray-200 hover:shadow-inner-custom;
+}
+
+.shape-decoration-round-left {
+    @apply absolute -left-28 h-40 w-40 lg:-left-40 lg:h-80 lg:w-80 rounded-full border-[25px] lg:border-[50px] border-primary-500;
+}
+
+.shape-decoration-round-bottom-right {
+    @apply absolute -right-28 bottom-0 h-40 w-40 lg:-right-40 lg:h-80 lg:w-80 rounded-full border-[25px] lg:border-[50px] border-primary-500;
+}
+
+
+.input-label {
+    @apply  text-xl text-primary-50;
+}
+
+.input-padding {
+    @apply px-5 py-3;
+}
+
+.input-default {
+    @apply  text-lg text-primary-100 w-full cursor-pointer rounded-xl border-[1.5px] bg-transparent outline-none transition;
+    /* dark:bg-form-input */
+    /* dark:border-form-strokedark */
+    /* disabled:bg-whiter */
+    /* active:border-primary */
+    /* border-stroke */
+    /* focus:border-primary  */
+    /* dark:focus:border-primary  */
+    /* disabled:cursor-default; */
+}
+
+.input-file {
+    @apply file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:px-5 file:py-3 file:hover:bg-opacity-10 dark:file:bg-white/30 dark:file:text-white;
+    /* file:border-stroke */
+    /* file:bg-whiter */
+    /* file:hover:bg-primary */
+    /* dark:file:border-form-strokedark */
+}
+
+.input-select {
+    @apply appearance-none;
+}
+
+
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-items {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 15s linear infinite;
+}
