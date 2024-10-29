@@ -218,6 +218,7 @@ export default function Home() {
                 required
                 dir="rtl"
                 className="input-default input-padding input-select"
+                aria-label="نوع الخدمة المطلوبة"
               >
                 <option value="">إختر نوع الخدمة</option>
                 <option value="birth_certificate">شهادة الميلاد</option>
@@ -233,11 +234,11 @@ export default function Home() {
             <input
               type="text"
               name="title"
-              placeholder=""
               value={formData.title}
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="عنوان الوثيقة"
             />
 
             <label className="input-label">تفاصيل الوثيقة المطلوبة</label>
@@ -247,6 +248,7 @@ export default function Home() {
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="تفاصيل الوثيقة المطلوبة"
             ></textarea>
 
             <label className="input-label">الإسم الشخصي</label>
@@ -257,6 +259,7 @@ export default function Home() {
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="الإسم الشخصي"
             />
 
             <label className="input-label">اللقب</label>
@@ -267,6 +270,7 @@ export default function Home() {
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="اللقب"
             />
 
             <label className="input-label">البريد الإلكتروني</label>
@@ -277,6 +281,7 @@ export default function Home() {
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="البريد الإلكتروني"
             />
 
             <label className="input-label">رقم الهاتف</label>
@@ -287,7 +292,9 @@ export default function Home() {
               onChange={handleInputChange}
               required
               className="input-default input-padding"
+              aria-label="رقم الهاتف"
             />
+
             <div className="flex w-full items-center justify-between">
               <a
                 href="./tawkil.pdf"
@@ -300,11 +307,15 @@ export default function Home() {
             </div>
 
             <div className="relative flex w-full text-lg">
+              <label htmlFor="fileUpload" className="input-label w-full">
+                تحميل ملف التوكيل
+              </label>
               <input
                 type="file"
                 id="fileUpload"
                 className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
                 onChange={handleFileChange}
+                aria-label="تحميل ملف التوكيل"
               />
               <p
                 id="fileName"
@@ -319,6 +330,7 @@ export default function Home() {
                 اختر ملف
               </label>
             </div>
+
             <div className="flex w-full justify-center pt-10">
               <CustomButton
                 text="إرسال الطلب"

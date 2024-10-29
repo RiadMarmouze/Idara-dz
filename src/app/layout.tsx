@@ -78,6 +78,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Scheherazade+New:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="favicon.ico" />
         <link
           rel="apple-touch-icon"
