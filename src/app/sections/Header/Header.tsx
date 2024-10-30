@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   }, []);
   return (
     <header
-      className={`fixed hidden xl:block top-0 left-0 z-20 w-full transition-colors duration-300 ${
+      className={`fixed hidden lg:block top-0 left-0 z-20 w-full transition-colors duration-300 ${
         scrolled ? "bg-primary-500 lg:border-b lg:border-primary-50 " : "border-none bg-transparent"
       }`}
     >

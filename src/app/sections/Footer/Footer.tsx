@@ -11,7 +11,7 @@ import LinkedIn from "@public/assets/Icons/Media/linkedin.svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer z-10 hidden w-full xl:block">
+    <footer className="footer z-10 hidden w-full lg:block">
       <div className="flex flex-col items-center border-t border-primary-50">
         <div className="body-responsive-container flex flex-col items-end gap-5 p-10">
           <Link href="/" passHref>

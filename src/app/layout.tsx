@@ -113,7 +113,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="relative mx-auto flex h-full w-full max-w-[1920px] flex-col bg-secondary-50">
-        <div className="absolute -z-10 hidden h-full w-full xl:block">
+        <div className="absolute -z-10 hidden h-full w-full lg:block">
           <video
             className="absolute left-0 top-0 h-full w-full object-cover"
             autoPlay
@@ -127,10 +127,10 @@ export default function RootLayout({
 
         <Header  />
 
-        <main className="z-10 mt-[160px] hidden w-full xl:block">{children}</main>
+        <main className="z-10 mt-[160px] hidden w-full lg:block">{children}</main>
 
         <Footer />
-        <div className="block xl:hidden">
+        <div className="block lg:hidden">
           <SmallScreenNotificationPage />
         </div>
       </body>
