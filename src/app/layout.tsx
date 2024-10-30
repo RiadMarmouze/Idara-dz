@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./sections/Header/Header";
 import Footer from "./sections/Footer/Footer";
+import SmallScreenNotificationPage from "./small-screen";
 
 export const metadata: Metadata = {
   title: "Idara DZ: Simplifying Administrative Paperwork in Algeria",
@@ -111,21 +112,27 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className="mx-auto flex h-full w-full max-w-[1920px] flex-col bg-secondary-50">
-        <video
-          className="absolute left-0 top-0 -z-10 h-full w-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          src="assets/Videos/hero-time-lapse.mp4"
-        />
-        <div className="absolute h-full w-full bg-primary-500/60" />
-        <Header />
+      <body className="relative mx-auto flex h-full w-full max-w-[1920px] flex-col bg-secondary-50">
+        <div className="absolute -z-10 hidden h-full w-full xl:block">
+          <video
+            className="absolute left-0 top-0 h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src="assets/Videos/hero-time-lapse.mp4"
+          />
+          <div className="absolute h-full w-full bg-primary-500/60" />
+        </div>
 
-        <main className="z-10 mt-[160px] w-full">{children}</main>
+        <Header  />
+
+        <main className="z-10 mt-[160px] hidden w-full xl:block">{children}</main>
 
         <Footer />
+        <div className="block xl:hidden">
+          <SmallScreenNotificationPage />
+        </div>
       </body>
     </html>
   );

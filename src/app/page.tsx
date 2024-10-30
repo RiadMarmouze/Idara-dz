@@ -43,17 +43,23 @@ export default function Home() {
 
   // Sample data for popular and latest services
   const popularServices = [
-    { name: "الاستعلام عن حالة طلب الدفتر العقاري", link: "#" },
-    { name: "الاستعلام عن المخالفات العقارية", link: "#" },
-    { name: "طلب إصدار شهادة ميلاد", link: "#" },
-    { name: "طلب تجديد بطاقة الهوية الوطنية البيومترية", link: "#" },
+    // { name: "الاستعلام عن حالة طلب الدفتر العقاري", link: "#" },
+    // { name: "الاستعلام عن المخالفات العقارية", link: "#" },
+    { name: "الإستشارات القانونية و الإدارية", link: "#" },
+    { name: "دراسة الملف موضوع النزاع", link: "#" },
+    { name: "تحرير العرائض و المذكرات الجوابية", link: "#" },
+    { name: "تحرير العقود العرفية", link: "#" },
   ];
 
   const latestServices = [
-    { name: "طلب استخراج شهادة السوابق العدلية", link: "#" },
-    { name: "طلب إصدار رخصة بناء", link: "#" },
-    { name: "طلب توثيق عقود الزواج", link: "#" },
-    { name: "الاستعلام عن حالة طلب بطاقة العائلة", link: "#" },
+    { name: "إيداع ملف علامة تجارية لدى INAPI", link: "#" },
+    {
+      name: "المساعدة الإدارية لدى المحافظة العقارية، CNAS، CASNOS",
+      link: "#",
+    },
+    { name: "الترجمة، عربي، فرنسي، إنجليزي و تحرير الطلبات", link: "#" },
+    { name: "دراسة ملف فيزا أمريكا، كندا، أوروبا", link: "#" },
+    { name: "حجز الفندقة و تذكرة الطيران", link: "#" },
   ];
 
   // Select the active list based on the current tab
@@ -96,14 +102,12 @@ export default function Home() {
         id="hero"
         className="relative flex h-[calc(100vh-160px)] w-full justify-center gap-10"
       >
-        <div className="absolute -left-[8%] flex h-full w-1/5 flex-col">
-          <div className="relative flex h-full w-full items-center">
-            <img
-              src="/assets/Images/Logo/logo-I.png"
-              alt="Illustrative Image"
-              className="h-full w-full object-cover opacity-50"
-            />
-          </div>
+        <div className="absolute -left-[8%] flex h-full w-1/5 flex-1 flex-col">
+          <img
+            src="/assets/Images/Logo/logo-I.png"
+            alt="Illustrative Image"
+            className="h-full w-full object-cover object-right opacity-50"
+          />
         </div>
         <div className="flex w-2/5 flex-col items-center justify-center gap-10">
           <h1 className="text-section-title z-10 text-center text-primary-50">
@@ -114,14 +118,12 @@ export default function Home() {
             .دعنا نساعدك بإنجاز جميع المعاملات الإدارية بسرعة وسهولة
           </h2>
         </div>
-        <div className="absolute -right-[8%] flex h-full w-1/5 flex-col">
-          <div className="relative flex h-full w-full items-center">
-            <img
-              src="/assets/Images/Logo/logo-I.png"
-              alt="Illustrative Image"
-              className="h-full w-full object-cover opacity-50"
-            />
-          </div>
+        <div className="absolute -right-[8%] flex h-full w-1/5 flex-1 flex-col">
+          <img
+            src="/assets/Images/Logo/logo-I.png"
+            alt="Illustrative Image"
+            className="h-full w-full object-cover object-left opacity-50"
+          />
         </div>
       </section>
       {/* about-us *********************************************************************************************/}
@@ -133,12 +135,12 @@ export default function Home() {
             شركة جزائرية متخصصة في تقديم الخدمات الإدارية، تهدف إلى تسهيل جميع
             أنواع الوثائق والإجراءات اللازمة للمواطنين والمقيمين. نقدم خدمات
             شاملة ومتكاملة تهتم بكافة التفاصيل لإتمام المعاملات القانونية
-            والإدارية بكل سهولة وراحة.
+            .والإدارية بكل سهولة وراحة
           </p>
         </div>
       </section>
 
-      {/* Our Services */}
+      {/* Our Services **********************************************************************************************/}
       <section id="our-services" className="body-responsive-container">
         <div className="flex w-full items-center justify-between">
           <Link href={"/all-services"}>
@@ -155,16 +157,6 @@ export default function Home() {
           {/* Filter Buttons */}
           <div className="flex items-center space-x-4 pr-10 rtl:space-x-reverse">
             <button
-              onClick={() => setActiveTab("popular")}
-              className={`px-4 h-fit  ${
-                activeTab === "popular"
-                  ? "bg-primary-500 text-primary-50 rounded-xl py-2 text-xl"
-                  : " text-primary-500 rounded-xl py-2 text-xl"
-              }`}
-            >
-              الخدمات الشائعة
-            </button>
-            <button
               onClick={() => setActiveTab("latest")}
               className={`px-4 h-fit ${
                 activeTab === "latest"
@@ -174,6 +166,16 @@ export default function Home() {
             >
               أحدث الخدمات
             </button>
+            <button
+              onClick={() => setActiveTab("popular")}
+              className={`px-4 h-fit  ${
+                activeTab === "popular"
+                  ? "bg-primary-500 text-primary-50 rounded-xl py-2 text-xl"
+                  : " text-primary-500 rounded-xl py-2 text-xl"
+              }`}
+            >
+              الخدمات الشائعة
+            </button>
           </div>
 
           {/* Service Cards */}
@@ -182,9 +184,10 @@ export default function Home() {
             className="grid w-full grid-cols-1 gap-4 rounded-xl border border-primary-500 bg-primary-500 px-16 py-8 text-lg sm:grid-cols-2 lg:grid-cols-3"
           >
             {services.map((service, index) => (
-              <a
+              <Link
                 href={service.link}
                 key={index}
+                aria-label="service-bookmark"
                 className="grid-grow rounded-lg border border-primary-200 bg-primary-50 p-4 text-primary-500 transition hover:bg-primary-50/80"
               >
                 <div className="flex items-start justify-between gap-4">
@@ -193,13 +196,13 @@ export default function Home() {
                     <IconBookMark className="h-4 w-4 stroke-primary-50 stroke-[2px]" />
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact Form **********************************************************************************************/}
       <section id="contact-us" className="body-responsive-container">
         <h3 className="mb-6 text-center text-3xl font-bold text-primary-900">
           تواصل معنا
@@ -221,9 +224,32 @@ export default function Home() {
                 aria-label="نوع الخدمة المطلوبة"
               >
                 <option value="">إختر نوع الخدمة</option>
-                <option value="birth_certificate">شهادة الميلاد</option>
-                <option value="residence_certificate">شهادة السكن</option>
-                <option value="social_security">وثائق الضمان الاجتماعي</option>
+                <option value="legal_consultations">
+                  الإستشارات القانونية و الإدارية
+                </option>
+                <option value="case_study">دراسة الملف موضوع النزاع</option>
+                <option value="petition_drafting">
+                  تحرير العرائض و المذكرات الجوابية
+                </option>
+                <option value="contract_drafting">تحرير العقود العرفية</option>
+                <option value="trademark_filing">
+                  إيداع ملف علامة تجارية لدى INAPI
+                </option>
+                <option value="patent_design_filing">
+                  إيداع ملف براءة اختراع، التصاميم لدى INAPI
+                </option>
+                <option value="administrative_support">
+                  المساعدة الإدارية لدى المحافظة العقارية، CNAS، CASNOS
+                </option>
+                <option value="translation_requests">
+                  الترجمة، عربي، فرنسي، إنجليزي و تحرير الطلبات
+                </option>
+                <option value="visa_file_review">
+                  دراسة ملف فيزا أمريكا، كندا، أوروبا
+                </option>
+                <option value="hotel_flight_booking">
+                  حجز الفندقة و تذكرة الطيران
+                </option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center justify-center">
                 <IconArrowSelectDown className="h-8 w-8 stroke-primary-50 stroke-[2px]" />
@@ -237,6 +263,7 @@ export default function Home() {
               value={formData.title}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="عنوان الوثيقة"
             />
@@ -247,6 +274,7 @@ export default function Home() {
               value={formData.description}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="تفاصيل الوثيقة المطلوبة"
             ></textarea>
@@ -258,6 +286,7 @@ export default function Home() {
               value={formData.firstName}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="الإسم الشخصي"
             />
@@ -269,6 +298,7 @@ export default function Home() {
               value={formData.lastName}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="اللقب"
             />
@@ -280,6 +310,7 @@ export default function Home() {
               value={formData.email}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="البريد الإلكتروني"
             />
@@ -291,6 +322,7 @@ export default function Home() {
               value={formData.phone}
               onChange={handleInputChange}
               required
+              dir="rtl"
               className="input-default input-padding"
               aria-label="رقم الهاتف"
             />
@@ -307,9 +339,6 @@ export default function Home() {
             </div>
 
             <div className="relative flex w-full text-lg">
-              <label htmlFor="fileUpload" className="input-label w-full">
-                تحميل ملف التوكيل
-              </label>
               <input
                 type="file"
                 id="fileUpload"
